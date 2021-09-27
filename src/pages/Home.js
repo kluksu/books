@@ -15,11 +15,11 @@ export default class Home extends Component {
   searchForBooks = () => {
     this.setState({ errorText: "" });
     getData(
-      `https://www.googleapis.com/books/v1/volumes?q=search+${this.state.searchText}&maxResults=10&key=${APIKey}`
+      `https://www.googleapis.com/books/v1/volumes?q=${this.state.searchText}&maxResults=10&key=${APIKey}`
     ).then((res) => {
       console.log(res);
       this.setState({ booksList: res.items });
-      if (res === undefined || res.totalItems == 0) {
+      if (res === undefined || res.totalItems == 0 || res.error) {
         this.setState({
           errorText: "no results where found, please search again",
         });
