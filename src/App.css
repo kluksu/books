@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+* {
+  direction: ltr;
+  box-sizing: border-box;
+}
+body > div:first-of-type {
+  background-color: rgb(235, 217, 197);
+}
+html {
+  background-color: rgb(235, 217, 197);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.upperContainer {
+  padding-top: 40px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.myCard {
+  width: 70%;
+  /* height:300px ; */
+  border: 0.1px outset;
+  margin: 20px;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.829);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+button {
+  width: 100%;
+  background-color: rgb(77, 77, 231);
   color: white;
+  height: 40px;
+  font-size: 25px !important ;
+  font-weight: 700;
+  border: none;
+  padding: 0px;
+  border-radius: 5px !important;
+}
+.myCard > div:last-of-type {
+  text-align: left;
 }
 
-.App-link {
-  color: #61dafb;
+.cardsContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+img {
+  max-width: 200px;
+  margin: auto;
+}
+.title {
+  font-size: 30px;
+  font-weight: 700;
+}
+.myCard div,
+img {
+  margin-bottom: 10px;
+}
+.errorText {
+  text-align: center;
+  color: red;
+}
+.searchBox {
+  width: 100%;
+  margin-bottom: 15px;
+  height: 39px;
+}
+form {
+  width: 50%;
+}
+button:hover{
+  cursor: pointer;
 }
